@@ -1,40 +1,20 @@
 <header class="relative">
   <!--Header-Background-and-parallax-image-->
-  <div class="header-bg bg-primary">
-    <div class="header-scroll-item">
-      <div class="container">
-        <div class="col-xs-4">
-          <div class="cloud1">
-            <img src="/assets/images/effect/note.png" alt="">
-          </div>
-        </div>
-        <div class="col-xs-4">
-          <div class="cloud2">
-            <img src="/assets/images/effect/glass.png" alt="">
-          </div>
-        </div>
-        <div class="col-xs-4">
-          <div class="cloud3">
-            <img src="/assets/images/effect/laptop.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="header-bg bg-primary"></div>
   <!--Header-Background-and-parallax-image/-->
   <!--Header-Top-Bar-->
   <div class="container">
     <div class="row">
       <div class="space-10"></div>
       <div class="col-xs-6 col-sm-4">
-        <a href="index.html"><img src="/assets/images/logo.png" alt=""></a>
+        <a [routerLink]="['']"><img src="/assets/images/logo.png" alt=""></a>
       </div>
       <div class="col-xs-6 col-sm-8 text-right xs-text-center">
         <div class="space-15"></div>
         <ul class="breadcrumb text-white hidden-xs">
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a [routerLink]="['/about']">About</a></li>
+          <li><a [routerLink]="['/blog']">Blog</a></li>
+          <li><a [routerLink]="['/contact']">Contact</a></li>
         </ul>
         <a href="#login-form" class="bttn bttn-green" data-toggle="modal">Login</a>
         <!-- Modal -->
@@ -122,7 +102,7 @@
               </tr>
             </table>
             <div class="text-center">
-              <a href="#" class="bttn bttn-green padding15 show">Proceed to checkout ($18.00)</a>
+              <a href="#" class="bttn bttn-green  padding15 show">Proceed to checkout ($18.00)</a>
             </div>
           </div>
         </div>
@@ -147,19 +127,19 @@
             <!--Mainmenu-Item-->
             <div class="collapse navbar-collapse navbar-left" id="mainmenu">
               <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="shop.html">Template</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="shop.html">Pages <span
-                  class="caret"></span></a>
+                <li><a [routerLink]="['']">Home</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+                <li><a [routerLink]="['/blog']">Blog</a></li>
+                <li><a [routerLink]="['/template']">Template</a></li>
+                <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="shop.html">Pages
+                  <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="view.html">Product view</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="tream.html">tream</a></li>
+                    <li><a [routerLink]="['/products']">Product view</a></li>
+                    <li><a [routerLink]="['/checkout']">Checkout</a></li>
+                    <li><a [routerLink]="['/terms']">Terms</a></li>
                   </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a [routerLink]="['/contact']">Contact</a></li>
               </ul>
             </div>
             <!--Mainmenu-Item/-->
@@ -177,21 +157,13 @@
         </div>
       </nav>
     </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p class="text-white"></p>
+      </div>
+    </div>
+    <div class="space-10"></div>
   </div>
   <!--Mainmenu-Area/-->
-  <!--Header-Text-->
-  <div class="container">
-    <div class="row">
-      <div class="space-100"></div>
-      <div class="space-50"></div>
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center text-white">
-        <h1>Exclusive marketplace</h1>
-        <div class="space-10"></div>
-        <p>Free for both personal &amp; commercial use. Have a bite!</p>
-      </div>
-      <div class="space-100"></div>
-      <div class="space-50"></div>
-    </div>
-  </div>
-  <!--Header-Text/-->
 </header>
+<!--Header/-->

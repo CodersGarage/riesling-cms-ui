@@ -11,6 +11,10 @@ export class ProductService {
   }
 
   getProducts(urlParams): any {
-    return this.httpClient.get(ApiConfig.getProductApi() + urlParams);
+    return this.httpClient.get(ApiConfig.getProductListApi() + urlParams);
+  }
+
+  getProduct(productId): any {
+    return this.httpClient.get(ApiConfig.getProductApi(productId));
   }
 }

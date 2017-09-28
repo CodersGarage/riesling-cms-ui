@@ -47,7 +47,8 @@
             </div>
             <div class="pro-bttn text-center">
               <a href="checkout.html" class="bttn bttn-green">Purchase</a>
-              <a href="view.html" class="bttn bttn-blue">Item Details</a>
+              <a [routerLink]="['/products', product.product_code]" class="bttn bttn-blue" target="_blank">Item
+                Details</a>
             </div>
           </div>
           <div class="space-20"></div>

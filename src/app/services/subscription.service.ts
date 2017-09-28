@@ -11,7 +11,7 @@ export class SubscriptionService {
   }
 
   subscriptionRequest(params): any {
-    return this.httpClient.post(ApiConfig.getSubscriptionApi(),
+    return this.httpClient.post(ApiConfig.getSubscribeApi(),
       JSON.stringify(params));
   }
 }

@@ -1,0 +1,190 @@
+
+.asRange {
+    background-color: #f4f4f4;
+    border-radius: 2px;
+    height: 10px;
+    position: relative;
+    width: 100%;
+}
+.asRange .asRange-pointer {
+    background-color: #fff;
+    border-radius: 9px;
+    box-shadow: 0 0 10px 0 #000;
+    cursor: pointer;
+    height: 10px;
+    left: 30%;
+    margin-left: -4px;
+    position: absolute;
+    width: 10px;
+    z-index: 2;
+}
+.asRange .asRange-pointer::before {
+    background-color: #ffffff;
+    border-radius: inherit;
+    bottom: -4px;
+    content: "";
+    left: -4px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+.asRange .asRange-pointer::after {
+    background-color: #248cef;
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.asRange .asRange-pointer.start {
+    left: 0;
+    margin-left: 4px;
+}
+.asRange .asRange-pointer.stop {
+    left: 100%;
+    margin-left: -12px;
+}
+.asRange .asRange-pointer .asRange-tip {
+    bottom: -30px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 300;
+    height: 20px;
+    left: 0;
+    line-height: 20px;
+    margin-left: -15px;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: opacity 0.3s ease-in-out 0s;
+    transition: opacity 0.3s ease-in-out 0s;
+    width: 36px;
+}
+.asRange .asRange-selected {
+    background-color: #248cef;
+    border-radius: 9px;
+    height: 8px;
+    left: 30%;
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+}
+.asRange .asRange-scale {
+    display: none;
+}
+.asRange-scale {
+    background-color: #cfcdc7;
+    border-radius: 8px;
+    height: 8px;
+    position: relative;
+    width: 331px;
+}
+.asRange-scale .asRange-pointer {
+    background-color: #fff;
+    border-radius: 9px;
+    height: 8px;
+    left: 30%;
+    margin-left: -4px;
+    position: absolute;
+    width: 8px;
+    z-index: 2;
+}
+.asRange-scale .asRange-pointer::before {
+    background: #6ba1ad none repeat scroll 0 0;
+    border-radius: inherit;
+    bottom: -4px;
+    content: "";
+    left: -4px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+.asRange-scale .asRange-pointer::after {
+    background: #fff none repeat scroll 0 0;
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.asRange-scale .asRange-pointer.start {
+    left: 0;
+    margin-left: 4px;
+}
+.asRange-scale .asRange-pointer.stop {
+    left: 100%;
+    margin-left: -12px;
+}
+.asRange-scale .asRange-pointer .asRange-tip {
+    background-color: #5d5c58;
+    border: 1px solid #5d5c58;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    height: 20px;
+    left: 0;
+    line-height: 20px;
+    margin-left: -15px;
+    position: absolute;
+    text-align: center;
+    top: -33px;
+    -webkit-transition: opacity 0.3s ease-in-out 0s;
+    transition: opacity 0.3s ease-in-out 0s;
+    width: 36px;
+}
+.asRange-scale .asRange-pointer .asRange-tip::before {
+    background-color: #5d5c58;
+    bottom: -3px;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    left: 50%;
+    margin-left: -3px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 6px;
+}
+.asRange-scale .asRange-selected {
+    background-color: #7ebdcb;
+    border-radius: 9px;
+    height: 8px;
+    left: 30%;
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+}
+.asRange-scale .asRange-scale {
+    bottom: -22px;
+    height: 20px;
+    left: 0;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+.asRange-scale .asRange-scale li {
+    height: 20px;
+    margin: 0 0 0 -15px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 18px;
+    width: 30px;
+}
+.asRange-scale .asRange-scale li:first-child {
+    left: 0;
+}
+.asRange-scale .asRange-scale li:nth-child(2) {
+    left: 33.3%;
+}
+.asRange-scale .asRange-scale li:nth-child(3) {
+    left: 66.6%;
+}
+.asRange-scale .asRange-scale li:last-child {
+    left: 100%;
+}

@@ -6,4 +6,9 @@ import {Component} from '@angular/core';
 })
 export class FooterComponent {
 
+  appCopyright;
+
+  constructor() {
+    this.appCopyright = '2017 RIESLING CMS. All Rights Reserved.';
+  }
 }

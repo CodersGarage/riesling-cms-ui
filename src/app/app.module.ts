@@ -8,7 +8,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {ProductComponent} from './pages/product/product.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from "@angular/http";
+import {ProductDetailsComponent} from './pages/productdetails/product.details.component';
+import {ContactComponent} from './pages/contact/contact.component';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +20,14 @@ const appRoutes: Routes = [
   {
     path: 'products',
     component: ProductComponent
+  },
+  {
+    path: 'products/:productId',
+    component: ProductDetailsComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   }
 ];
 
@@ -27,14 +36,15 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailsComponent,
+    ContactComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     HttpClientModule,
-    FormsModule,
-    HttpModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

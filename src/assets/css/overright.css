@@ -1,0 +1,178 @@
+.bg-primary {
+    background-color: #2494ed;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    border-radius: 2px;
+    display: inline-block;
+    list-style: outside none none;
+    margin-bottom: 0;
+    padding: 10px 15px;
+}
+
+.btn {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.bttn {
+    border: medium none;
+    border-radius: 2px;
+    padding: 6px 15px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    box-shadow: 0 0 0 0 #aaaaaa;
+    display: inline-block;
+    text-align: center;
+    min-width: 110px;
+    margin: 5px 0;
+}
+
+.bttn:hover {
+    box-shadow: 0 4px 0 0 #aaaaaa;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+.bttn-green {
+    background-color: #00d793;
+    color: #ffffff;
+}
+
+.bttn:focus {
+    color: #ffffff;
+}
+
+.bttn-green:hover {
+    box-shadow: 0 4px 0 0 #00bd81;
+    color: #ffffff;
+}
+
+.bttn-blue {
+    background-color: #248df0;
+    color: #ffffff;
+}
+
+.bttn-blue:hover {
+    box-shadow: 0 4px 0 0 #207ed6;
+    color: #ffffff;
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+    border-top: none;
+    border-bottom: 1px solid #dddddd;
+}
+
+.navbar.navbar-default.mainmenu {
+    border-bottom: 3px solid #d0d0d0;
+}
+
+.navbar.navbar-default {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-radius: 2px;
+}
+
+.search-form .form-control {
+    border: none;
+    box-shadow: none;
+    background-color: #f0f0f0;
+    border-radius: 2px 0 0 2px
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+    background: none;
+    color: #248cef;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+}
+
+.dropdown-menu > li > a {
+    padding: 8px 14px;
+}
+
+.search-form .btn {
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+}
+
+.search-form .btn:hover {
+    color: #00d793;
+}
+
+.search-form {
+    margin-right: 0;
+}
+
+.well {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: none;
+    border: none;
+    border-radius: 2px;
+}
+
+.well.well-lg {
+    padding: 60px;
+}
+
+.bttn.show {
+    width: 100%;
+}
+
+.contact-form .form-control,
+#login-form .form-group .form-control {
+    border: medium none;
+    box-shadow: none;
+    font-size: 14px;
+    min-height: 50px;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+}
+
+.btn-rounded {
+    border: medium none;
+    border-radius: 100px;
+    padding: 1em 3em;
+}
+
+.media-object {
+    min-width: 80px;
+}
+
+.media-body {
+    width: auto;
+}
+
+.table > tbody > tr > td,
+.table > thead > tr > th {
+    padding: 18px 10px;
+    vertical-align: middle;
+}
+
+.table > thead > tr > th {
+    font-weight: 400;
+}
+
+.table thead {
+    height: 80px;
+}
+
+.list-unstyled li {
+    margin: 5px 0;
+}
