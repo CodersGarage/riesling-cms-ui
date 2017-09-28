@@ -7,4 +7,8 @@ export class ApiConfig {
   static getProductApi(): string {
     return this.getBaseUrl() + '/api/v1/product/list';
   }
+
+  static getSubscriptionApi(): string {
+    return this.getBaseUrl() + '/api/v1/subscription/create';
+  }
 }

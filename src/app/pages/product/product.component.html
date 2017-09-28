@@ -99,19 +99,17 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="text-white text-center">
-                  <h3 class="text-uppercase">Subscribe now!</h3>
+                  <h3 class="text-uppercase">{{subscriptionTitle}}</h3>
                   <div class="space-10"></div>
                   <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
                 </div>
                 <div class="space-40"></div>
-                <form action="#" class="subscribe-form">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Add your email hare">
-                    <div class="input-group-btn">
-                      <button class="btn btn-success">Subscribe</button>
-                    </div>
+                <div class="input-group">
+                  <input class="form-control" placeholder="Add your email here" [(ngModel)]="subscriptionEmail"/>
+                  <div class="input-group-btn">
+                    <button class="btn btn-success" (click)="onSubscriptionRequest()">Subscribe</button>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
             <div class="space-100"></div>

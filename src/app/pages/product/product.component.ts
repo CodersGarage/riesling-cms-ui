@@ -1,13 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from '../../services/product.service';
+import {SubscriptionService} from '../../services/subscription.service';
 
 @Component({
   selector: 'app-products',
   templateUrl: 'product.component.html',
-  providers: [ProductService]
+  providers: [ProductService, SubscriptionService]
 })
 export class ProductComponent implements OnInit {
   private productService;
+  private subscriptionService;
+
   pageLimit;
   currentPage;
   totalPages;
@@ -16,8 +19,12 @@ export class ProductComponent implements OnInit {
   hasPrev;
   products;
 
-  constructor(productService: ProductService) {
+  subscriptionEmail;
+  subscriptionTitle;
+
+  constructor(productService: ProductService, subscriptionService: SubscriptionService) {
     this.productService = productService;
+    this.subscriptionService = subscriptionService;
 
     this.pageLimit = 9;
     this.currentPage = 0;
@@ -26,6 +33,9 @@ export class ProductComponent implements OnInit {
     this.hasNext = false;
     this.hasPrev = false;
     this.products = [];
+
+    this.subscriptionEmail = '';
+    this.subscriptionTitle = 'SUBSCRIBE NOW!';
   }
 
   ngOnInit() {
@@ -75,5 +85,21 @@ export class ProductComponent implements OnInit {
         console.log(data);
       }
     );
+  }
+
+  onSubscriptionRequest() {
+    if (this.subscriptionEmail.trim().length > 0) {
+      const params = {subscription_email: '\'' + this.subscriptionEmail + '\''};
+      this.subscriptionService.subscriptionRequest(params).subscribe(
+        data => {
+          this.subscriptionTitle = data.message;
+          if (data.code === 200) {
+            this.subscriptionEmail = '';
+          }
+        }
+      );
+    } else {
+      this.subscriptionTitle = 'SUBSCRIBE NOW!';
+    }
   }
 }

@@ -7,6 +7,8 @@ import {FooterComponent} from './pages/footer/footer.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ProductComponent} from './pages/product/product.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from "@angular/http";
 
 const appRoutes: Routes = [
   {
@@ -30,7 +32,9 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
