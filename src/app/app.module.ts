@@ -1,16 +1,39 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './pages/header/header.component';
+import {FooterComponent} from './pages/footer/footer.component';
+import {RouterModule, Routes} from '@angular/router';
+import {ProductComponent} from './pages/product/product.component';
+import {HttpClientModule} from '@angular/common/http';
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/products'
+  },
+  {
+    path: 'products',
+    component: ProductComponent
+  }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ProductComponent
   ],
   imports: [
-    BrowserModule
+    RouterModule.forRoot(appRoutes),
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

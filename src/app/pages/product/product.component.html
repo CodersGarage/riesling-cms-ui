@@ -1,0 +1,125 @@
+<!--Body-contact-->
+<section class="gray-bg">
+  <div class="space-20"></div>
+  <div class="container">
+    <div class="navbar navbar-default filter-menu">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#filter">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-left" id="filter">
+          <ul class="nav navbar-nav">
+            <li class="active"><a data-toggle="pill" href=".all">All</a></li>
+            <li><a data-toggle="pill" href=".featured">Featured</a></li>
+            <li><a data-toggle="pill" href=".popular">Popular</a></li>
+            <li><a data-toggle="pill" href=".trending">Trending</a></li>
+            <li><a data-toggle="pill" href=".freebies">Freebies</a></li>
+          </ul>
+        </div>
+        <form action="#" class="navbar-form navbar-right">
+          <div class="form-group">
+            <label for="sort">Price Range &nbsp;</label>
+            <select name="sort" id="sort" class="form-control">
+              <option value="">High</option>
+              <option value="">Low</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="space-20"></div>
+  <div class="container">
+    <div class="row tab-content">
+      <div class="col-xs-12 col-sm-4 tab-pane fade in active all  featured freebies" *ngFor="let product of products">
+        <div class="well pro-item">
+          <div class="relative fix">
+            <div class="item-photo">
+              <img src="/assets/images/portfolio/image-1.jpg" alt="">
+            </div>
+            <div class="pro-view-menu">
+              <a href="#"><i class="icofont icofont-heart-alt"></i></a>
+              <a href="#"><i class="icofont icofont-share"></i></a>
+            </div>
+            <div class="pro-bttn text-center">
+              <a href="checkout.html" class="bttn bttn-green">Purchase</a>
+              <a href="view.html" class="bttn bttn-blue">Item Details</a>
+            </div>
+          </div>
+          <div class="space-20"></div>
+          <div class="fix">
+            <div class="pull-left">
+              <h4>{{product.product_name}}</h4>
+              <div class="space-5"></div>
+              <div class="tag">
+                <a href="#">psd</a>
+                <a href="#">word</a>
+                <a href="#">item</a>
+              </div>
+            </div>
+            <div class="pull-right">
+              <div class="space-10"></div>
+              <h5>&#36;{{product.product_price}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space-60"></div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="shop-pagination">
+          <ul id="pagination-demo" class="pagination-sm pagination">
+            <li class="page-item first"><a [routerLink]="['/products']" class="page-link"
+                                           (click)="onFirstClick()">First</a></li>
+            <li class="page-item prev" *ngIf="hasPrev"><a [routerLink]="['/products']" class="page-link"
+                                                          (click)="onPrevClick()">Previous</a>
+            </li>
+            <li class="page-item" *ngFor="let page of totalPages; let i = index;">
+              <a [routerLink]="['/products']" (click)="onIndexClick(i)" class="page-link">{{i + 1}}</a>
+            </li>
+            <li class="page-item next" *ngIf="hasNext"><a [routerLink]="['/products']" (click)="onNextClick()"
+                                                          class="page-link">Next</a></li>
+            <li class="page-item last"><a [routerLink]="['/products']" (click)="onLastClick()"
+                                          class="page-link">Last</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="space-60"></div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="well">
+          <div class="bg-primary">
+            <div class="space-100"></div>
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <div class="text-white text-center">
+                  <h3 class="text-uppercase">Subscribe now!</h3>
+                  <div class="space-10"></div>
+                  <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
+                </div>
+                <div class="space-40"></div>
+                <form action="#" class="subscribe-form">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Add your email hare">
+                    <div class="input-group-btn">
+                      <button class="btn btn-success">Subscribe</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="space-100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space-60"></div>
+  </div>
+</section>
+<!--Body-contact/-->
